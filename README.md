@@ -12,6 +12,10 @@ Move into the project's directory:
 
 `cd react-todo-app`
 
+To install all dependances:
+
+`yarn install`
+
 ### Available scripts
 
 #### `yarn start`
