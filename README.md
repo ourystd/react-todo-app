@@ -1,6 +1,6 @@
 ## React Todo App
 
-This project is a basic task management app (todolist) with reactjs
+This project is a basic task management app (todolist) built with reactjs
 
 ## Available Scripts
 
