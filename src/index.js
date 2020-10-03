@@ -4,10 +4,12 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Countireslist from './components/CountiresList/CountiresList';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <Countireslist />
   </React.StrictMode>,
   document.getElementById('root')
 );
