@@ -1,0 +1,44 @@
+.country-card {
+    border: 1px solid #ccc;
+    padding: 0;
+    width: 300px;
+    border-radius: 4px;
+
+    .country-name {
+        padding: 10px;
+        margin: 0;
+        background-color: #888;
+        color: #fff;
+        text-align: center;
+    }
+    
+    .country-flag-wrapper {
+        width: 100%;
+        height: auto;
+    }
+
+    .details-wrapper {
+        display: block;
+        position: relative;
+        list-style: none;
+    }
+    .detail-item {
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        .icon {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+        }
+        > :last-child {
+            padding-top: 5px;
+        }
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
