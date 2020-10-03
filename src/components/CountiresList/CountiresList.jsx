@@ -6,7 +6,7 @@ import axios from 'axios'
 export default class Countireslist extends Component {
     
     state = {
-        countries: [1, 2, 3, 4]
+        countries: []
     }
     
     componentDidMount() {
@@ -20,12 +20,12 @@ export default class Countireslist extends Component {
 
     render() {
         return (
-            <div className="countries-list">
-                {
-                    this.state.countries.map((country, index) => (
-                        <Countryitem key={index} country={country} />
-                    ))
-                }
+            <div className="row countries-list">
+            {
+                this.state.countries.map((country, index) => (
+                    <Countryitem key={index} country={country} />
+                ))
+            }
             </div>
         )
     }

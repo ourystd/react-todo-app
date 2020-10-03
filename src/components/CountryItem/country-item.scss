@@ -1,7 +1,7 @@
 .country-card {
     border: 1px solid #ccc;
     padding: 0;
-    width: 300px;
+    width: 100%;
     border-radius: 4px;
 
     .country-name {
@@ -10,11 +10,15 @@
         background-color: #888;
         color: #fff;
         text-align: center;
+        font-size: medium;
     }
     
     .country-flag-wrapper {
         width: 100%;
-        height: auto;
+        height: 200px;
+        text-align: center;
+        background: #ccc center no-repeat;
+        background-size: cover;
     }
 
     .details-wrapper {
