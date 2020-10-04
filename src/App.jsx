@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.scss";
 
-import { BrowserRouter, Route, NavLink, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./pages/home";
 import NotFound404 from "./pages/not-found";
 import TodoApp from "./pages/todo-app";

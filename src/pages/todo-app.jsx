@@ -1,5 +1,4 @@
 import React from "react";
-import { Card, CardBody } from "reactstrap";
 import TodoList from "../components/TodoList/TodoList";
 
 export default function TodoApp() {
