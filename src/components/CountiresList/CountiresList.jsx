@@ -1,35 +1,33 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import Countryitem from "../CountryItem/CountryItem";
 
 import axios from "axios";
 
-export default class Countireslist extends Component {
-  state = {
-    countries: [],
-    loading: true,
-  };
+const Countireslist = () => {
+  const [state, setState] = useState({ countries: [], loading: true });
 
-  componentDidMount() {
+  // Load ressouces onComponentDidMount
+  useEffect(() => {
     axios
       .get(`https://restcountries.eu/rest/v2/region/africa`)
       .then((response) => {
-        this.setState({ countries: response.data, loading: false });
+        setState({ countries: response.data, loading: false });
       });
-  }
+  }, []);
 
-  render() {
-    return this.state.loading ? (
-      <div className="d-flex justify-content-center">
-        <div className="spinner-border text-secondary" role="status">
-          <span className="sr-only">Loading...</span>
-        </div>
+  return state.loading ? (
+    <div className="d-flex justify-content-center">
+      <div className="spinner-border text-secondary" role="status">
+        <span className="sr-only">Loading...</span>
       </div>
-    ) : (
-      <div className="row countries-list">
-        {this.state.countries.map((country, index) => (
-          <Countryitem key={index} country={country} />
-        ))}
-      </div>
-    );
-  }
-}
+    </div>
+  ) : (
+    <div className="row countries-list">
+      {state.countries.map((country, index) => (
+        <Countryitem key={index} country={country} />
+      ))}
+    </div>
+  );
+};
+
+export default Countireslist;
