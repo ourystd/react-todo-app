@@ -23,14 +23,15 @@ const TodoList = () => {
   const createTask = (e) => {
     e.preventDefault();
 
-    const newTask = {
-      id: state.tasks.length + 1,
-      name: state.newTaskName,
-      done: false,
-    };
-    console.log(newTask);
     setState((prevState) => ({
-      tasks: [...prevState.tasks, newTask],
+      tasks: [
+        ...prevState.tasks,
+        {
+          id: prevState.tasks.length + 1,
+          name: state.newTaskName,
+          done: false,
+        },
+      ],
       newTaskName: "",
     }));
   };
@@ -92,9 +93,9 @@ const TodoList = () => {
   return (
     <div>
       <ListGroup>
-        {state.tasks.map((task) => (
+        {state.tasks.map((task, index) => (
           <TodoItem
-            key={task.id}
+            key={index}
             task={task}
             onDelete={deteleTask}
             onStatusChange={completeTask}
