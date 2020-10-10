@@ -40,9 +40,10 @@ const TodoList = () => {
     let newTasks = [...state.tasks];
     newTasks.splice(indexToDelete, 1);
 
-    setState({
+    setState((prevState) => ({
+      ...prevState,
       tasks: newTasks,
-    });
+    }));
 
     console.log(newTasks);
   };
@@ -57,9 +58,10 @@ const TodoList = () => {
       return task;
     });
 
-    setState({
+    setState((prevState) => ({
+      ...prevState,
       tasks: newTasks,
-    });
+    }));
 
     console.log(state.tasks);
     // css effect
@@ -82,9 +84,10 @@ const TodoList = () => {
       return task;
     });
 
-    setState({
+    setState((prevState) => ({
+      ...prevState,
       tasks: newTasks,
-    });
+    }));
   };
   return (
     <div>
