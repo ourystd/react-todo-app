@@ -36,11 +36,6 @@ const NavBar = () => {
                 Countries App
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink to="/todo-hooks" className="nav-link">
-                Todo Hooks
-              </NavLink>
-            </li>
           </ul>
         </div>
       </nav>

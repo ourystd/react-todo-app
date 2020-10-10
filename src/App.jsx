@@ -7,7 +7,6 @@ import NotFound404 from "./pages/not-found";
 import TodoApp from "./pages/todo-app";
 import CountriesApp from "./pages/countries-app";
 import NavBar from "./components/Navbar/Navbar";
-import Todos from "./components/TodoHooks/todos";
 
 class App extends Component {
   render() {
@@ -18,7 +17,6 @@ class App extends Component {
           <Switch>
             <Route path="/todo-app" exact component={TodoApp} />
             <Route path="/countries-app" exact component={CountriesApp} />
-            <Route path="/todo-hooks" exact component={Todos} />
             <Route path="/" exact component={Home} />
             <Route component={NotFound404} />
           </Switch>
