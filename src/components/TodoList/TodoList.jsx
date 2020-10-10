@@ -27,7 +27,7 @@ const TodoList = () => {
       tasks: [
         ...prevState.tasks,
         {
-          id: prevState.tasks.length + 1,
+          id: Date.now(),
           name: state.newTaskName,
           done: false,
         },
